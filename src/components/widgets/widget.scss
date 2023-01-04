@@ -1,0 +1,41 @@
+@import '../../../styles/style.scss';
+
+.widget {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    justify-content: space-between;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    height: 130px;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .icon {
+            font-size: 18px;
+            padding: 5px;
+            // background-color: #f9dffd;
+            border-radius: 50%;
+            align-self: flex-start;
+
+        }
+
+        .title {
+            font-weight: $regular-font;
+            color: $blueish;
+            font-family: $font;
+            font-size: 11px;
+        }
+
+        .fee {
+            font-weight: $extra-bold-font;
+            color: $blueish;
+            font-family: $font;
+        }
+
+    }
+}

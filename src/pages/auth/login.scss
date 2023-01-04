@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url(../../fonts/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url(../../fonts/AvenirNextLTPro-Regular.otf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Demi';
+    src: url(../../fonts/avenir-next-demibold.ttf);
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content
+    }
+
+    :-moz-placeholder {
+        @content
+    }
+
+    ::-moz-placeholder {
+        @content
+    }
+
+    :-ms-input-placeholder {
+        @content
+    }
+}
+
+.login-page {
+    margin: 6vw;
+    // width: 100%;
+
+    .login-logo {
+        margin-left: 20px;
+
+        img {
+            width: 12%;
+            height: auto;
+        }
+    }
+
+    .login-section {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        height: 50vh;
+        gap: 2vw;
+
+        .login-image {
+            margin-top: 70px;
+
+            img {
+                height: 40%;
+                width: 85%;
+            }
+        }
+
+        .login-container {
+            width: 60%;
+            // margin-left: -50px;
+
+            .login-text {
+                // margin-top: -10%;
+
+                h2 {
+                    color: #213F7D;
+                    font-family: 'Avenir Next';
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: #545F7D;
+                    font-family: 'Avenir Next';
+                    font-style: italic;
+                    font-size: 11px;
+                    margin-top: 1vw;
+
+                }
+            }
+
+            .login-form {
+                position: relative;
+                margin-top: 5vw;
+                // width: 60%;
+                width: 30vw;
+                display: flex;
+                flex-direction: column;
+                gap: 2vw;
+
+                input {
+                    // width: 100%;
+                    height: 30px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 2px solid #dadbde;
+                    box-shadow: none;
+                    -webkit-box-shadow: none;
+
+                    @include placeholder {
+                        color: #dadbde;
+                        // font-weight: 100;
+                    }
+
+                    // border-color: #545F7D;
+                    &:focus {
+                        outline: none !important;
+                    }
+
+
+                }
+
+                span {
+                    position: absolute;
+                    top: 35%;
+                    right: 3%;
+                    cursor: pointer;
+                    color: #39CDCC;
+                    font-size: 8px;
+                    font-family: 'Avenir Demi';
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    padding: 5px;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    color: #39CDCC;
+                    font-family: 'Avenir Demi';
+                    // font-style: italic;
+                    font-weight: 100;
+                    font-size: 10px;
+                }
+
+                button {
+                    background-color: #39CDCC;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+
+}

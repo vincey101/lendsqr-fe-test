@@ -1,0 +1,29 @@
+// @import '../../../styles/style.scss';
+
+// .btn.active {
+//     color: green
+// }
+.span {
+    &.active {
+        background-color: rgb(185, 251, 185);
+        color: green;
+    }
+
+    &.pending {
+        background-color: rgb(241, 244, 157);
+        color: yellow;
+    }
+
+    &.blacklist {
+        background-color: rgb(244, 171, 167);
+        color: crimson;
+    }
+
+}
+
+.itemDetails {
+    display: flex;
+    gap: 7px;
+
+
+}

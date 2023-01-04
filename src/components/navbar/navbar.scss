@@ -1,0 +1,94 @@
+@import '../../../styles/style.scss';
+
+.navbar {
+    height: 70px;
+    border-bottom: 0.5px solid rgb(243, 242, 242);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .search-tab {
+            display: flex;
+
+
+            .search {
+                display: flex;
+                align-items: center;
+                border: 0.5px solid lightgray;
+                // border-radius: 5px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding: 15px;
+                // margin-left: 2vw;
+                height: 30px;
+
+                input {
+                    width: 22vw;
+                    border: none;
+                    outline: none;
+
+                    &::placeholder {
+                        font-size: 12px;
+                        // padding: 18px;
+                    }
+                }
+            }
+
+
+            .icon-wrapper {
+                background-color: #39CDCC;
+                width: 4vw;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon {
+                    color: white;
+                    width: 20x;
+                    height: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            // margin-right: 2vw;
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-right: 2.5vw;
+                cursor: pointer;
+
+                .avatar {
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    font-family: $font;
+                    font-weight: $bold-font;
+                    color: $blueish;
+                }
+
+                .caret {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+}

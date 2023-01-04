@@ -1,0 +1,102 @@
+// @font-face {
+//     font-family: 'Avenir Next';
+//     src: url(../../fonts/AvenirNextLTPro-Regular.otf);
+//     font-style: italic;
+// }
+
+// @import 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap';
+@import '../../../styles/style.scss';
+
+.sidebar {
+    flex: 1;
+    border-right: 0.5px solid rgb(243, 242, 242);
+    min-height: 100vh;
+
+    .top {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        // justify-content: center;
+
+        .logo {
+            width: 8vw;
+            height: 2vw;
+        }
+
+    }
+
+    hr {
+        border: 0.5px solid rgb(243, 242, 242);
+    }
+
+
+    .dropdown,
+    .dashboard {
+        margin-left: 10px;
+        display: flex;
+        color: #545F7D;
+        font-family: $font;
+        font-size: 13px;
+        margin-top: 20px;
+        font-weight: $bold-font;
+        gap: 7px;
+        cursor: pointer;
+
+        .switch-text {
+            color: $blueish;
+        }
+    }
+
+    .center {
+        padding-left: 10px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            p {
+                text-transform: uppercase;
+                // font-family: 'Avenir Next';
+                // font-style: italic;
+                font-family: $font;
+                font-weight: $extra-bold-font;
+                font-size: 12px;
+                margin-top: 20px;
+                margin-bottom: 15px;
+                color: #545F7D;
+
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                margin-bottom: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #dbedff;
+                }
+
+                i,
+                .icon {
+                    font-size: 14px;
+                    color: #545F7D;
+                }
+
+                span {
+                    font-size: 13px;
+                    font-weight: $extra-bold-font;
+                    color: #888;
+                    margin-left: 10px;
+                    font-family: $font;
+                    font-weight: $bold-font;
+
+                }
+            }
+        }
+    }
+
+}

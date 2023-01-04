@@ -1,0 +1,27 @@
+.datatable {
+    // height: 600px;
+    height: 670px;
+    padding: 20px;
+
+    .status {
+        padding: 2px;
+
+        &.Active {
+            background-color: rgb(230, 254, 230);
+            color: green;
+            border-radius: 50px;
+        }
+
+        &.Pending {
+            background-color: rgb(253, 243, 216);
+            color: goldenrod;
+            border-radius: 50px;
+        }
+
+        &.Blacklisted {
+            background-color: rgb(252, 231, 230);
+            color: crimson;
+            border-radius: 50px;
+        }
+    }
+}
