@@ -4,6 +4,8 @@
 
 ![Alt text](src/images/lendsqr-users.png)
 
+![Alt text](src/images/filter.png)
+
 ![Alt text](src/images/lendsqr-details.png)
 
 ## Installation
