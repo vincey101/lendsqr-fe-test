@@ -1,10 +1,8 @@
 # lendsqr-fe-test
 
+![Alt text](src/images/lendsqr-login.png)
 
-![Alt text](../../../Pictures/lendsqr-login.png)
+![Alt text](src/images/lendsqr-users.png)!
 
-![Alt text](../../../Pictures/lendsqr-users.png)
-
-
-![Alt text](../../../Pictures/lendsqr-details.png)
+[Alt text](src/images/lendsqr-details.png)
 
