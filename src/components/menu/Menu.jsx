@@ -2,25 +2,20 @@ import React, { useState } from 'react'
 import { Menu, MenuItem } from "@mui/material"
 import './menu.scss'
 import { Link, useParams } from 'react-router-dom';
-import axios from 'axios';
 import { useRecoilState } from 'recoil';
 import { statusState } from '../atom/StatusAtom';
 
 
-
-// import { MoreVertIcon } from '@mui/icons-material';
-
 const LongMenu = ({ id }) => {
-    // const [users, setUsers] = useState([]);
     const [anchorElm, setAnchorElm] = useState(null)
     const [open, setOpen] = useState(false)
-    // const [display, setDisplay] = useState(action)
+    // const [itemId, setItemId] = useState(null);
     const [display, setDisplay] = useRecoilState(statusState);
 
 
 
     const handleClick = (event) => {
-        // setAnchorElm(null);
+        setAnchorElm(null);
         setAnchorElm(event.currentTarget)
         setOpen(true)
     }
@@ -30,58 +25,18 @@ const LongMenu = ({ id }) => {
         setOpen(false)
     }
 
-
     const blackList = (id) => {
-        // const menuId = setAnchorElm(event.currentTarget)
-        // const menuId = event.target.innerText
         setAnchorElm(null);
-        setDisplay("Blacklisted")
-        // console.log(display);
-        // console.log(id);
-        // console.log(menuId);
 
+        // if (itemId === id) {
+        setDisplay("Blacklisted")
+        // }
+        // console.log(id);
     }
 
     const activeList = () => {
         setDisplay("Active")
-        // console.log(display);
     }
-
-    // const blackList = () => {
-    //     // setStatus(status => "Blacklisted")
-    //     // console.log(status);
-    //     setStatus("Blacklisted");
-    //     // setDisplay("Blacklisted");
-    //     console.log(status);
-    // }
-
-    // const blackList = () => {
-    //     setDisplay(st => {
-    //         const status = [...st.status];
-    //         status = "Blacklisted";
-    //         return { ...st, status }
-    //     })
-    // }
-
-
-    // let toggle = status ? 'active' : ""
-    // const blackList = () => {
-    //     if (status === "Pending" || status === "Active") {
-    //         setStatus(status[2])
-    //     }
-    //     console.log(status);
-    // }
-
-    // const handleActive = () => {
-
-    //     if (status === "pending" || status === "Blacklisted") {
-    //         setStatus("Active")
-
-    //     }
-    //     // console.log(status);
-    // }
-
-
 
     return (
         <div>
@@ -98,10 +53,6 @@ const LongMenu = ({ id }) => {
                         <span>View Details</span>
                     </MenuItem>
                 </Link>
-
-                {/* {display.map((data, id) => (
-                    <div key={id}> */}
-
 
 
                 <MenuItem onClick={handleClose} className="itemDetails"
@@ -120,12 +71,6 @@ const LongMenu = ({ id }) => {
                     <i className="fa-solid fa-user-check"></i>
                     <span onClick={activeList} > Activate User</span>
                 </MenuItem>
-
-                {/* </div>
-                )
-                )
-                } */}
-
 
             </Menu>
 

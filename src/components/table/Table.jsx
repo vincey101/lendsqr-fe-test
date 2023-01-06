@@ -6,15 +6,13 @@ import moment from 'moment';
 
 import './table.scss'
 import LongMenu from '../menu/Menu';
-import { Link } from 'react-router-dom';
-import { PanoramaSharp } from '@mui/icons-material';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { statusState } from '../atom/StatusAtom';
 
 const Table = () => {
     const [users, setUsers] = useState([]);
     const [pageSize, setPageSize] = useState(10);
-    // const [display, setDisplay] = useState(status);
+    // const [data, setData] = useRecoilState(statusState)
     const data = useRecoilValue(statusState)
 
 
@@ -25,7 +23,6 @@ const Table = () => {
                 setUsers(response.data)
             })
     }, [])
-
 
     const columns = [
         { field: 'orgName', headerName: 'ORGANIZATION', width: 200 },
@@ -52,7 +49,7 @@ const Table = () => {
                             alignItems: 'center',
                             gap: '15px'
                         }}>
-                        <span className={`status ${data}`} >{data}</span>
+                        <span className={`status ${data}`}>{data}</span>
                         <LongMenu id={params.row.id} />
                     </div>
                 )
@@ -79,6 +76,8 @@ const Table = () => {
                 columns={columns}
                 loading={!users.length}
                 pageSize={pageSize}
+                // onCellEdit={handleCellEdit}
+
                 rowsPerPageOptions={[10, 15, 20]}
                 // checkboxSelection
                 onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
